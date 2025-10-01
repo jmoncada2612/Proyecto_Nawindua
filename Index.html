@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Nawindúa - Finca Agroturística y Productiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #FDFBF8; color: #374151; }
+        .chart-container { position: relative; width: 100%; height: 40vh; max-height: 450px; }
+        .nav-link { transition: color 0.3s, border-bottom-color 0.3s; border-bottom: 2px solid transparent; }
+        .nav-link:hover, .nav-link.active { color: #166534; border-bottom-color: #166534; }
+        .hero { 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1528640/pexels-photo-1528640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .text-success { color: #166534; }
+        .bg-success-soft { background-color: #f0fdf4; }
+        /* Estilo para imágenes pequeñas en las tarjetas */
+        .icon-card-img { width: 4rem; height: 4rem; margin: 0 auto; display: block; object-fit: contain; }
+        /* Estilo para iconos de Impacto */
+        .impact-icon { color: #166534; width: 1.5rem; height: 1.5rem; } 
+        /* Estilo específico para el SVG de Kiosco/Cabaña */
+        .kiosco-svg { width: 3.5rem; height: 3.5rem; margin: 0 auto; display: block; fill: none; stroke: #166534; stroke-width: 2; }
+    </style>
+</head>
+<body class="bg-[#FDFBF8]">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-success">NAWINDÚA</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#vision" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700 active">Visión</a>
+                        <a href="#estrategia" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Estrategia</a>
+                        <a href="#pilares" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Pilares</a>
+                        <a href="#componentes" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Componentes</a>
+                        <a href="#plan" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Inversión</a>
+                        <a href="#finanzas" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Finanzas</a>
+                        <a href="#impacto" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Impacto</a>
+                        <a href="#contacto" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-700">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vision" class="hero py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight">
+                    Finca Agroturística Nawindúa - Inspirada en lo Ancestral
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-200">
+                    Un modelo de negocio integral que fusiona la sabiduría ancestral Arhuaca con prácticas sostenibles de agroforestería, turismo cultural y economía circular, creando un proyecto resiliente y de alto valor en Lebrija, Santander.
+                </p>
+                <div class="mt-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-white/90 rounded-lg shadow-lg">
+                        <h3 class="text-3xl font-bold text-success" id="totalInvestment"></h3>
+                        <p class="mt-2 text-gray-700 font-semibold">Inversión total requerida</p>
+                    </div>
+                    <div class="p-6 bg-white/90 rounded-lg shadow-lg">
+                        <h3 class="text-3xl font-bold text-success">2 Años</h3>
+                        <p class="mt-2 text-gray-700 font-semibold">Establecimiento y Puesta en Marcha</p>
+                    </div>
+                    <div class="p-6 bg-white/90 rounded-lg shadow-lg">
+                        <h3 class="text-3xl font-bold text-success">20 Años</h3>
+                        <p class="mt-2 text-gray-700 font-semibold">Proyección Financiera</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estrategia" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-800">Marco Estratégico y de Producción</h2>
+                    <p class="mt-4 max-w-4xl mx-auto text-gray-600">Este marco define la dirección del proyecto, nuestros principios de producción responsable y la asignación estratégica del territorio, elementos clave para garantizar la **viabilidad financiera y la sostenibilidad a largo plazo**.</p>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md lg:col-span-1">
+                        <h3 class="text-xl font-bold text-success mb-4">Misión, Visión y Objetivos</h3>
+                        <div class="space-y-4">
+                            <div><h4 class="font-bold text-gray-800">Misión</h4><p class="text-gray-600 text-sm">Ser un modelo agroturístico y productivo que fusiona la sabiduría ancestral Arhuaca y la innovación sostenible, generando valor económico, social y ambiental, con **producción responsable y alta captura de CO₂**.</p></div>
+                            <div><h4 class="font-bold text-gray-800">Visión</h4><p class="text-gray-600 text-sm">Convertir a Nawindúa en el referente nacional de una finca integral, **pedagógica** y autosostenible que demuestra la viabilidad de la agricultura regenerativa y **aporta a la mitigación del calentamiento global**.</p></div>
+                            <div><h4 class="font-bold text-gray-800">Objetivo</h4><p class="text-gray-600 text-sm">Obtener el financiamiento para establecer una operación rentable y autosostenible en **2 años**, que contribuya al desarrollo socioeconómico regional, a la conservación ambiental y a la **reducción de emisiones de GEI y CO₂**.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md lg:col-span-2">
+                        <h3 class="text-xl font-bold text-success mb-4">Enfoque de Producción Responsable y Captura de Carbono</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Agricultura Regenerativa</h4>
+                                <p class="text-gray-600 text-sm mt-1">Captura CO₂ al transformar el suelo en un **sumidero de carbono** mediante cultivos de cobertura y manejo integrado. Aumenta la materia orgánica y la fertilidad del suelo.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Permacultura</h4>
+                                <p class="text-gray-600 text-sm mt-1">Aumenta el **secuestro de carbono** en suelo y biomasa (árboles/cultivos) a través del diseño de sistemas agroforestales. Minimiza la dependencia de combustibles fósiles, reduciendo emisiones.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Economía Circular</h4>
+                                <p class="text-gray-600 text-sm mt-1">Captura carbono usando subproductos como **biocarbón** y reincorporando residuos de cosecha. Cierra ciclos de materiales, mejorando la salud del suelo y disminuyendo las emisiones de GEI.</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Diferencia y Sinergia de Nuestros Modelos</h3>
+                        <div class="space-y-3">
+                            <p class="text-gray-600 text-sm">**Permacultura:** Es la **filosofía de diseño** que establece el plano general de la finca (zonificación, flujos, ubicación de cabañas y cultivos). Busca la eficiencia y la autosuficiencia del sistema completo.</p>
+                            <p class="text-gray-600 text-sm">**Agricultura Regenerativa:** Es la **práctica y técnica** aplicada en el área productiva (12.5 ha). Se enfoca en mejorar la salud del suelo y la biodiversidad, utilizando la **captura de carbono** como principal indicador de éxito.</p>
+                            <p class="text-gray-600 text-sm">**Economía Circular:** Es la **gestión de recursos** que cierra los ciclos. Transforma los "desechos" de las zonas Regenerativas y Ganaderas (estiércol, podas, subproductos del cacao) en insumos de alto valor (humus, biocarbón, alimento animal), **maximizando el valor y minimizando las emisiones de GEI**.</p>
+                            <p class="text-gray-600 text-sm font-bold mt-2">En resumen: La **Permacultura** diseña el mapa; la **Agricultura Regenerativa** cura la tierra; y la **Economía Circular** impulsa la rentabilidad y reduce los residuos.</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Compromiso Climático (Detalle de CO₂)</h3>
+                        <div class="space-y-2">
+                            <p class="text-gray-600 text-sm">🌳 **Bosque Nativo (12.5 ha):** Estas áreas contienen **bosques de más de 30 años**, sirviendo como un sumidero de carbono pasivo clave para la **mitigación del calentamiento global**.</p>
+                            <p class="text-gray-600 text-sm">🌱 **Área Productiva (12.5 ha):** La implementación de **sistemas agroforestales** maximiza la **captura de CO₂** en la biomasa y el suelo, demostrando una producción de alto valor con huella de carbono positiva.</p>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Compromiso Arhuaco y Valor Pedagógico</h3>
+                        <div class="space-y-2">
+                            <p class="text-gray-600 text-sm">👥 **Inclusión Social:** Los principales beneficiarios del proyecto son los miembros de nuestros pueblos originarios de la **Comunidad Arhuaca**.</p>
+                            <p class="text-gray-600 text-sm">🛠️ **Participación Continua:** La comunidad Arhuaca estará presente en **cada fase**, desde la implementación en la construcción inicial, la adaptación de sistemas y la **operación continua** de todos los componentes productivos y turísticos.</p>
+                            <p class="text-gray-600 text-sm">🌱 **Ambiente Pedagógico:** La finca será un **ambiente pedagógico vivo** para la formación. Ofrecerá una experiencia vivencial en el proceso de los **cacaos finos de aroma**, demostrando la implementación de ciclos y microlotes de alta calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-6 bg-success-soft rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-success mb-2 text-center">Distribución Estratégica del Territorio (25 Hectáreas)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                        <div>
+                            <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
+                            <p class="text-gray-700 font-semibold">Área de Conservación / Ecoturismo</p>
+                            <p class="text-gray-600 text-sm">Cuidado y fortalecimiento del bosque y fauna. Espacio de bajo impacto para las **5 cabañas ecoturísticas**. El ecoturismo financia la conservación.</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
+                            <p class="text-gray-700 font-semibold">Área Productiva</p>
+                            <p class="text-gray-600 text-sm">Ubicación de cultivos de alto valor (cacao, café, aguacate) e infraestructura de la economía circular (criaderos, plantas de procesamiento).</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="pilares" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-800">Ejes Estratégicos del Proyecto</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Nawindúa se sostiene sobre tres pilares interconectados que garantizan su sostenibilidad y rentabilidad a largo plazo.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-md">
+                        <div class="text-5xl text-success text-center">
+                            <svg class="kiosco-svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M4 14l8 -4l8 4v6l-8 4l-8 -4v-6" />
+                                <path d="M12 10v9" />
+                                <path d="M20 8l-8 -4l-8 4" />
+                                <path d="M12 4l8 4" />
+                                <path d="M4 8l8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Turismo Cultural y Ambiental</h3>
+                        <p class="mt-2 text-gray-600">Integración de la comunidad indígena arhuaca, creando una experiencia auténtica y responsable con cabañas, camping y senderos.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><div class="text-5xl text-success text-center">🍫</div><h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Producción de Alto Valor</h3><p class="mt-2 text-gray-600">Cultivos de cacao 'fino y de aroma', aguacate y café bajo un sistema orgánico. Un producto premium para mercados de exportación.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><div class="text-5xl text-success text-center">♻️</div><h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Economía Circular</h3><p class="mt-2 text-gray-600">Un sistema donde los subproductos de una actividad se convierten en insumos para otra, minimizando residuos y maximizando la eficiencia.</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="componentes" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Componentes del Ecosistema Productivo</h2><p class="mt-4 max-w-2xl mx-auto text-gray-600">Cada elemento es una pieza de un engranaje perfecto y autosostenible que reduce costos y multiplica ingresos.</p></div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐐 Ganado Caprino</h4><p class="mt-2 text-gray-600">Producen leche para quesos artesanales y su estiércol es un biofertilizante clave para iniciar el ciclo de nutrientes.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🦆 Aves Felices y Libres</h4><p class="mt-2 text-gray-600">Gallinas criollas y patos Khaki Campbell controlan plagas, producen huevos orgánicos y su gallinaza enriquece el compost.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐇 Cunicultura y Cuyes</h4><p class="mt-2 text-gray-600">Aportan proteína y su estiércol, rico en nitrógeno, es un potente activador para el proceso de compostaje.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐛 Lombricultura y Compostaje</h4><p class="mt-2 text-gray-600">El corazón del sistema: transforma residuos orgánicos en humus de lombriz, garantizando la fertilidad de nuestros cultivos a costo cero.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🦗 Fábrica de Proteína: Grillos</h4><p class="mt-2 text-gray-600">Criamos grillos que se convierten en harina de alta proteína para fabricar, con nuestra peletizadora, nuestro propio alimento para peces y aves.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐟 Acuaponía y Piscicultura</h4><p class="mt-2 text-gray-600">Un ciclo cerrado donde los peces (tilapia) alimentan con sus desechos a las hortalizas, que a su vez purifican el agua. Eficiencia máxima.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plan" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Plan de Inversión</h2><p class="mt-4 max-w-3xl mx-auto text-gray-600">Un presupuesto transparente que demuestra la asignación estratégica de los fondos y los costos operativos anuales para garantizar la correcta implementación y funcionamiento del proyecto.</p></div>
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Presupuesto de Infraestructura y Activos</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white rounded-lg">
+                                <thead><tr><th class="py-2 px-4 bg-success-soft text-left text-xs font-medium text-gray-500 uppercase">Descripción</th><th class="py-2 px-4 bg-success-soft text-right text-xs font-medium text-gray-500 uppercase">Valor (COP)</th></tr></thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr><td class="py-3 px-4">Construcción de 5 cabañas turísticas</td><td class="py-3 px-4 text-right font-medium">175,000,000</td></tr>
+                                    <tr><td class="py-3 px-4">Adecuación 5 ha para cultivos</td><td class="py-3 px-4 text-right font-medium">97,500,000</td></tr>
+                                    <tr><td class="py-3 px-4">Establecimiento de ganado caprino y área de pastoreo</td><td class="py-3 px-4 text-right font-medium">69,427,020</td></tr>
+                                    <tr><td class="py-3 px-4">Senderos, zonas comunes y cocina</td><td class="py-3 px-4 text-right font-medium">45,489,000</td></tr>
+                                    <tr><td class="py-3 px-4">Maquinaria y Sistemas de E. Circular</td><td class="py-3 px-4 text-right font-medium">52,011,000</td></tr>
+                                    <tr class="bg-success-soft"><td class="py-3 px-4 font-bold">TOTAL INVERSIÓN</td><td class="py-3 px-4 text-right font-bold text-success">439,427,020</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                     <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Presupuesto de Operación Anual</h3>
+                        <div class="overflow-x-auto">
+                           <table class="min-w-full bg-white rounded-lg">
+                                <thead><tr><th class="py-2 px-4 bg-success-soft text-left text-xs font-medium text-gray-500 uppercase">Concepto</th><th class="py-2 px-4 bg-success-soft text-right text-xs font-medium text-gray-500 uppercase">Costo Mensual (COP)</th></tr></thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr><td class="py-3 px-4">Salario de Empleados (2)</td><td class="py-3 px-4 text-right font-medium">3,247,000</td></tr>
+                                    <tr><td class="py-3 px-4">Gastos Operativos (Turismo)</td><td class="py-3 px-4 text-right font-medium">1,500,000</td></tr>
+                                    <tr><td class="py-3 px-4">Costos Fijos Ganadería</td><td class="py-3 px-4 text-right font-medium">3,000,000</td></tr>
+                                    <tr><td class="py-3 px-4">Costos de Producción (Cacao)</td><td class="py-3 px-4 text-right font-medium">1,500,000</td></tr>
+                                    <tr class="bg-success-soft"><td class="py-3 px-4 font-bold">TOTAL COSTO ANUAL ESTIMADO</td><td class="py-3 px-4 text-right font-bold text-success">110,964,000</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs text-gray-500 mt-2 text-center">Este es el costo de funcionamiento para el primer año de operación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="finanzas" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Proyecciones Financieras a 20 Años</h2><p class="mt-4 max-w-2xl mx-auto text-gray-600">El gráfico muestra el flujo de caja neto anual proyectado. Los dos primeros años corresponden al periodo de establecimiento y puesta en marcha, con ingresos consolidados a partir del tercer año.</p></div>
+                <div class="mt-12 bg-white p-6 rounded-lg shadow-lg">
+                    <div class="chart-container mx-auto"><canvas id="cashFlowChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="impacto" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Estrategia de Crecimiento e Impacto</h2><p class="mt-4 max-w-2xl mx-auto text-gray-600">Un plan sólido para posicionar la marca y asegurar un impacto positivo y duradero.</p></div>
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Estrategia de Marketing y Posicionamiento</h3>
+                        <div class="space-y-6">
+                            <div><h4 class="text-xl font-bold text-success">Posicionamiento de Marca</h4><p class="mt-2 text-gray-600">La marca Nawindúa se posicionará como un referente de sostenibilidad, autenticidad cultural y calidad superior, destacando la herencia ancestral y las prácticas orgánicas.</p></div>
+                            <div><h4 class="text-xl font-bold text-success">Canales de Comunicación</h4><ul class="mt-2 list-disc list-inside text-gray-600 space-y-1"><li><strong>Redes Sociales:</strong> Para compartir el día a día de la finca y la cultura Arhuaca.</li><li><strong>Página Web:</strong> Un sitio informativo y de reservas en línea.</li><li><strong>Alianzas Estratégicas:</strong> Colaboraciones con agencias de turismo y organizaciones de comercio justo.</li></ul></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Impacto y Sostenibilidad</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl" style="color: #166534;">📈</div>
+                                <div><h4 class="font-bold">Impacto Económico</h4><p class="text-gray-600">Creación de empleos, diversificación económica local y un negocio exportador de alto valor.</p></div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl text-success">👥</div>
+                                <div><h4 class="font-bold">Impacto Social</h4><p class="text-gray-600">Fortalecimiento de la comunidad Arhuaca a través de empleo digno y valoración de sus saberes.</p></div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl" style="color: #166534;">🌎</div>
+                                <div><h4 class="font-bold">Impacto Ambiental</h4><p class="text-gray-600">Conservación del 70% del bosque nativo, regeneración de suelos y **alta captura de CO₂**.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+                    <div class="text-center md:text-left">
+                        <h4 class="font-bold text-gray-500 uppercase tracking-wider">Proponente del Proyecto (RL)</h4>
+                        <h3 class="text-3xl font-bold text-gray-800 mt-2">John Jairo Moncada Cepeda</h3>
+                        <p class="text-lg text-success font-bold">Director - Fundación Existencia Sostenible</p>
+                        <p class="text-sm text-gray-700 mt-2">Administrador Público, Esp. Proyectos de Desarrollo, Asesor en comunidades étnicas y pueblos originarios en Formación en Inteligencia Artificial, Talentotech-Mintic</p>
+                        <p class="mt-4 text-gray-500">NIT: 900.862.769-8 | Cel. 316 580 3779</p>
+                        <p class="text-gray-500">Email: funexsos@gmail.com</p>
+                    </div>
+                     <div class="bg-gray-50 p-8 rounded-lg shadow-inner text-center">
+                        <h4 class="font-bold text-gray-500 uppercase tracking-wider">Propuesta Dirigida a</h4>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4">José Cáceres León</h3>
+                        <p class="text-gray-600">Gerente de Oficina - Agencia Centroabastos</p>
+                        <p class="mt-2 font-bold text-success">BANCO AGRARIO DE COLOMBIA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800"><div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-400"><p>&copy; 2025 Proyecto Nawindúa. Una iniciativa para el desarrollo sostenible en Santander, Colombia.</p></div></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formatCurrency = (value) => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(value);
+            // El valor de la inversión total se mantiene
+            document.getElementById('totalInvestment').textContent = formatCurrency(439427020);
+            
+            const generateProjections = (years, initialNetFlow, annualGrowthRate, setupYears) => {
+                const netFlow = [];
+                for (let i = 0; i < setupYears; i++) {
+                    netFlow.push(0); 
+                }
+                let currentFlow = initialNetFlow;
+                for (let i = setupYears; i < years; i++) {
+                    netFlow.push(currentFlow);
+                    currentFlow *= (1 + annualGrowthRate);
+                }
+                return { years: Array.from({ length: years }, (_, i) => `Año ${i + 1}`), netFlow };
+            };
+            
+            const projections20Years = generateProjections(20, 200796000, 0.05, 2);
+
+            new Chart(document.getElementById('cashFlowChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: projections20Years.years,
+                    datasets: [{ 
+                        label: 'Flujo Neto Anual Proyectado', 
+                        data: projections20Years.netFlow, 
+                        backgroundColor: '#166534'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        tooltip: { callbacks: { label: (c) => ` ${formatCurrency(c.raw)}` } }, 
+                        legend: { display: false } 
+                    },
+                    scales: { 
+                        y: { ticks: { callback: (v) => new Intl.NumberFormat('es-CO', { notation: 'compact' }).format(v) }, grid: { color: '#e9ecef' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+            
+            // Script de navegación actualizado para incluir la nueva sección #estrategia
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            window.addEventListener('scroll', () => {
+                let current = 'vision';
+                sections.forEach(section => {
+                    if (pageYOffset >= section.offsetTop - 70) { current = section.getAttribute('id'); }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
