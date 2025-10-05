@@ -15,18 +15,20 @@
         .nav-link { transition: color 0.3s, border-bottom-color 0.3s; border-bottom: 2px solid transparent; }
         .nav-link:hover, .nav-link.active { color: #166534; border-bottom-color: #166534; }
         .hero { 
+            /* Fondo de imagen principal con superposición para efecto motivador */
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1528640/pexels-photo-1528640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
             background-size: cover; 
             background-position: center; 
+            min-height: 550px; 
+            display: flex;
+            align-items: center;
         }
         .text-success { color: #166534; }
         .bg-success-soft { background-color: #f0fdf4; }
-        /* Estilo para imágenes pequeñas en las tarjetas */
-        .icon-card-img { width: 4rem; height: 4rem; margin: 0 auto; display: block; object-fit: contain; }
-        /* Estilo para iconos de Impacto */
-        .impact-icon { color: #166534; width: 1.5rem; height: 1.5rem; } 
         /* Estilo específico para el SVG de Kiosco/Cabaña */
         .kiosco-svg { width: 3.5rem; height: 3.5rem; margin: 0 auto; display: block; fill: none; stroke: #166534; stroke-width: 2; }
+        /* Estilo para los títulos internos de las subsecciones */
+        .sub-title-box { padding: 0.75rem; background-color: #f0fdf4; border-radius: 0.5rem; }
     </style>
 </head>
 <body class="bg-[#FDFBF8]">
@@ -83,85 +85,95 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-800">Marco Estratégico y de Producción</h2>
-                    <p class="mt-4 max-w-4xl mx-auto text-gray-600">Este marco define la dirección del proyecto, nuestros principios de producción responsable y la asignación estratégica del territorio, elementos clave para garantizar la **viabilidad financiera y la sostenibilidad a largo plazo**.</p>
+                    <p class="mt-4 max-w-4xl mx-auto text-gray-600">Este marco define la dirección del proyecto, nuestros principios de producción responsable y la asignación estratégica del territorio, elementos clave para garantizar la viabilidad financiera y la sostenibilidad a largo plazo.</p>
                 </div>
                 
                 <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-md lg:col-span-1">
                         <h3 class="text-xl font-bold text-success mb-4">Misión, Visión y Objetivos</h3>
                         <div class="space-y-4">
-                            <div><h4 class="font-bold text-gray-800">Misión</h4><p class="text-gray-600 text-sm">Ser un modelo agroturístico y productivo que fusiona la sabiduría ancestral Arhuaca y la innovación sostenible, generando valor económico, social y ambiental, con **producción responsable y alta captura de CO₂**.</p></div>
-                            <div><h4 class="font-bold text-gray-800">Visión</h4><p class="text-gray-600 text-sm">Convertir a Nawindúa en el referente nacional de una finca integral, **pedagógica** y autosostenible que demuestra la viabilidad de la agricultura regenerativa y **aporta a la mitigación del calentamiento global**.</p></div>
-                            <div><h4 class="font-bold text-gray-800">Objetivo</h4><p class="text-gray-600 text-sm">Obtener el financiamiento para establecer una operación rentable y autosostenible en **2 años**, que contribuya al desarrollo socioeconómico regional, a la conservación ambiental y a la **reducción de emisiones de GEI y CO₂**.</p></div>
+                            <div><h4 class="font-bold text-success">🎯 Misión</h4><p class="text-gray-600 text-sm">Ser un modelo agroturístico y productivo que fusiona la sabiduría ancestral Arhuaca y la innovación sostenible, generando valor económico, social y ambiental, con <span class="font-bold">producción responsable y alta captura de CO₂</span>.</p></div>
+                            <div><h4 class="font-bold text-success">🌟 Visión</h4><p class="text-gray-600 text-sm">Convertir a Nawindúa en el referente nacional de una finca integral, pedagógica y autosostenible que demuestra la viabilidad de la agricultura regenerativa y <strong>aporta a la mitigación del calentamiento global</strong>.</p></div>
+                            <div><h4 class="font-bold text-success">🚀 Objetivo</h4><p class="text-gray-600 text-sm">Obtener el financiamiento para establecer una operación rentable y autosostenible en <strong>2 años</strong>, que contribuya al desarrollo socioeconómico regional, a la conservación ambiental y a la <strong>reducción de emisiones de GEI y CO₂</strong>.</p></div>
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-md lg:col-span-2">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md lg:col-span-2 space-y-6">
+                        
                         <h3 class="text-xl font-bold text-success mb-4">Enfoque de Producción Responsable y Captura de Carbono</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-gray-200 pb-4 mb-4">
                             <div>
-                                <h4 class="font-bold text-gray-800">Agricultura Regenerativa</h4>
-                                <p class="text-gray-600 text-sm mt-1">Captura CO₂ al transformar el suelo en un **sumidero de carbono** mediante cultivos de cobertura y manejo integrado. Aumenta la materia orgánica y la fertilidad del suelo.</p>
+                                <h4 class="font-bold text-success">🌱 Agricultura Regenerativa</h4>
+                                <p class="text-gray-600 text-sm mt-1">Captura CO₂ al transformar el suelo en un <strong>sumidero de carbono</strong> mediante cultivos de cobertura y manejo integrado. Aumenta la materia orgánica y la fertilidad del suelo.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-800">Permacultura</h4>
-                                <p class="text-gray-600 text-sm mt-1">Aumenta el **secuestro de carbono** en suelo y biomasa (árboles/cultivos) a través del diseño de sistemas agroforestales. Minimiza la dependencia de combustibles fósiles, reduciendo emisiones.</p>
+                                <h4 class="font-bold text-success">🌳 Permacultura</h4>
+                                <p class="text-gray-600 text-sm mt-1">Aumenta el <strong>secuestro de carbono</strong> en suelo y biomasa (árboles/cultivos) con sistemas agroforestales. Minimiza la dependencia de combustibles fósiles, reduciendo emisiones.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-800">Economía Circular</h4>
-                                <p class="text-gray-600 text-sm mt-1">Captura carbono usando subproductos como **biocarbón** y reincorporando residuos de cosecha. Cierra ciclos de materiales, mejorando la salud del suelo y disminuyendo las emisiones de GEI.</p>
+                                <h4 class="font-bold text-success">♻️ Economía Circular</h4>
+                                <p class="text-gray-600 text-sm mt-1">Captura carbono usando subproductos como <strong>biocarbón</strong> y reincorporando residuos de cosecha. Cierra ciclos de materiales, mejorando la salud del suelo y disminuyendo las emisiones de GEI.</p>
                             </div>
                         </div>
                         
-                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Diferencia y Sinergia de Nuestros Modelos</h3>
-                        <div class="space-y-3">
-                            <p class="text-gray-600 text-sm">**Permacultura:** Es la **filosofía de diseño** que establece el plano general de la finca (zonificación, flujos, ubicación de cabañas y cultivos). Busca la eficiencia y la autosuficiencia del sistema completo.</p>
-                            <p class="text-gray-600 text-sm">**Agricultura Regenerativa:** Es la **práctica y técnica** aplicada en el área productiva (12.5 ha). Se enfoca en mejorar la salud del suelo y la biodiversidad, utilizando la **captura de carbono** como principal indicador de éxito.</p>
-                            <p class="text-gray-600 text-sm">**Economía Circular:** Es la **gestión de recursos** que cierra los ciclos. Transforma los "desechos" de las zonas Regenerativas y Ganaderas (estiércol, podas, subproductos del cacao) en insumos de alto valor (humus, biocarbón, alimento animal), **maximizando el valor y minimizando las emisiones de GEI**.</p>
-                            <p class="text-gray-600 text-sm font-bold mt-2">En resumen: La **Permacultura** diseña el mapa; la **Agricultura Regenerativa** cura la tierra; y la **Economía Circular** impulsa la rentabilidad y reduce los residuos.</p>
+                        <div class="border-t border-gray-200 pt-4">
+                            <h3 class="text-xl font-bold text-success mb-2">Diferencia y Sinergia de Nuestros Modelos</h3>
+                            <div class="space-y-2">
+                                <p class="text-gray-600 text-sm">🍃 <span class="font-bold">Permacultura:</span> Es la filosofía de <strong>diseño</strong> que traza el mapa de la finca.</p>
+                                <p class="text-gray-600 text-sm">🚜 <span class="font-bold">Agricultura Regenerativa:</span> Es la práctica y <strong>ejecución técnica</strong> que cura la tierra y captura carbono.</p>
+                                <p class="text-gray-600 text-sm">🔄 <span class="font-bold">Economía Circular:</span> Es la <strong>gestión de recursos</strong> que impulsa la rentabilidad y minimiza residuos.</p>
+                                <p class="text-gray-600 text-sm font-bold mt-2">✨ En resumen: La Permacultura diseña el mapa; la Agricultura Regenerativa cura la tierra; y la Economía Circular impulsa la rentabilidad y reduce los residuos.</p>
+                            </div>
                         </div>
                         
-                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Compromiso Climático (Detalle de CO₂)</h3>
-                        <div class="space-y-2">
-                            <p class="text-gray-600 text-sm">🌳 **Bosque Nativo (12.5 ha):** Estas áreas contienen **bosques de más de 30 años**, sirviendo como un sumidero de carbono pasivo clave para la **mitigación del calentamiento global**.</p>
-                            <p class="text-gray-600 text-sm">🌱 **Área Productiva (12.5 ha):** La implementación de **sistemas agroforestales** maximiza la **captura de CO₂** en la biomasa y el suelo, demostrando una producción de alto valor con huella de carbono positiva.</p>
+                        <div class="border-t border-gray-200 pt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-success mb-3">Compromiso Climático: Detalle de CO₂</h3>
+                                <div class="space-y-3">
+                                    <p class="text-gray-600 text-sm">🌎 <span class="font-bold">Impacto Climático Positivo:</span> Con bosques de más de 30 años (12.5 ha) y sistemas agroforestales (12.5 ha) en producción, Nawindúa es un sumidero de carbono activo.</p>
+                                    <p class="text-gray-600 text-sm">🌱 <span class="font-bold">Área Productiva (12.5 ha):</span> La implementación de sistemas agroforestales maximiza la captura de CO₂ en la biomasa y el suelo, demostrando una producción de alto valor con huella de carbono positiva.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-success mb-3">Compromiso Arhuaco y Valor Pedagógico</h3>
+                                <div class="space-y-3">
+                                    <p class="text-gray-600 text-sm">👥 <span class="font-bold">Inclusión Social:</span> Los principales beneficiarios del proyecto son los miembros de nuestra Comunidad Arhuaca. Su participación garantiza la autenticidad y el arraigo cultural.</p>
+                                    <p class="text-gray-600 text-sm">🛠️ <span class="font-bold">Participación Continua:</span> La comunidad estará presente en cada fase, desde la implementación inicial hasta la operación continua de todos los componentes.</p>
+                                    <p class="text-gray-600 text-sm">👨‍🏫 <span class="font-bold">Ambiente Pedagógico:</span> La finca es un laboratorio vivo para la formación, demostrando la viabilidad de la producción sostenible a pequeña escala.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h3 class="text-xl font-bold text-success mt-8 mb-2 text-center">Distribución Estratégica del Territorio (25 Hectáreas)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center p-4 bg-success-soft rounded-xl">
+                            <div>
+                                <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
+                                <p class="text-gray-700 font-semibold">🌳 Área de Conservación / Ecoturismo</p>
+                                <p class="text-gray-600 text-sm">Cuidado y fortalecimiento del bosque y fauna. Espacio de bajo impacto para las 5 cabañas ecoturísticas y avistamientos de aves y animales del bosque. El ecoturismo financia la conservación.</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
+                                <p class="text-gray-700 font-semibold">🚜 Área Productiva</p>
+                                <p class="text-gray-600 text-sm">Ubicación de cultivos de alto valor (cacao, café, aguacate) e infraestructura de la economía circular (criaderos, plantas de procesamiento).</p>
+                            </div>
                         </div>
 
-                        <h3 class="text-xl font-bold text-success mt-6 mb-2">Compromiso Arhuaco y Valor Pedagógico</h3>
-                        <div class="space-y-2">
-                            <p class="text-gray-600 text-sm">👥 **Inclusión Social:** Los principales beneficiarios del proyecto son los miembros de nuestros pueblos originarios de la **Comunidad Arhuaca**.</p>
-                            <p class="text-gray-600 text-sm">🛠️ **Participación Continua:** La comunidad Arhuaca estará presente en **cada fase**, desde la implementación en la construcción inicial, la adaptación de sistemas y la **operación continua** de todos los componentes productivos y turísticos.</p>
-                            <p class="text-gray-600 text-sm">🌱 **Ambiente Pedagógico:** La finca será un **ambiente pedagógico vivo** para la formación. Ofrecerá una experiencia vivencial en el proceso de los **cacaos finos de aroma**, demostrando la implementación de ciclos y microlotes de alta calidad.</p>
-                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-12 p-6 bg-success-soft rounded-xl shadow-lg">
-                    <h3 class="text-xl font-bold text-success mb-2 text-center">Distribución Estratégica del Territorio (25 Hectáreas)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
-                        <div>
-                            <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
-                            <p class="text-gray-700 font-semibold">Área de Conservación / Ecoturismo</p>
-                            <p class="text-gray-600 text-sm">Cuidado y fortalecimiento del bosque y fauna. Espacio de bajo impacto para las **5 cabañas ecoturísticas**. El ecoturismo financia la conservación.</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold text-success">12.5 ha (50%)</p>
-                            <p class="text-gray-700 font-semibold">Área Productiva</p>
-                            <p class="text-gray-600 text-sm">Ubicación de cultivos de alto valor (cacao, café, aguacate) e infraestructura de la economía circular (criaderos, plantas de procesamiento).</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
-        <section id="pilares" class="py-20">
+        
+        <section id="pilares" class="py-20 bg-gray-100">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-800">Ejes Estratégicos del Proyecto</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-gray-600">Nawindúa se sostiene sobre tres pilares interconectados que garantizan su sostenibilidad y rentabilidad a largo plazo.</p>
                 </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white rounded-xl shadow-md">
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-md flex flex-col justify-start">
                         <div class="text-5xl text-success text-center">
                             <svg class="kiosco-svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -175,22 +187,87 @@
                         <h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Turismo Cultural y Ambiental</h3>
                         <p class="mt-2 text-gray-600">Integración de la comunidad indígena arhuaca, creando una experiencia auténtica y responsable con cabañas, camping y senderos.</p>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><div class="text-5xl text-success text-center">🍫</div><h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Producción de Alto Valor</h3><p class="mt-2 text-gray-600">Cultivos de cacao 'fino y de aroma', aguacate y café bajo un sistema orgánico. Un producto premium para mercados de exportación.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><div class="text-5xl text-success text-center">♻️</div><h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Economía Circular</h3><p class="mt-2 text-gray-600">Un sistema donde los subproductos de una actividad se convierten en insumos para otra, minimizando residuos y maximizando la eficiencia.</p></div>
+                    
+                    <div class="p-6 bg-white rounded-xl shadow-md lg:col-span-1 flex flex-col justify-start">
+                        <div class="text-5xl text-success text-center">🍫</div>
+                        <h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Producción de Alto Valor</h3>
+                        <p class="mt-2 text-gray-600">Cultivos de cacao 'fino y de aroma', aguacate y café bajo un sistema orgánico. Un producto premium para mercados de exportación.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-xl shadow-md flex flex-col justify-start">
+                        <div class="text-5xl text-success text-center">♻️</div>
+                        <h3 class="mt-4 text-xl font-bold text-gray-800 text-center">Economía Circular</h3>
+                        <p class="mt-2 text-gray-600">Un sistema donde los subproductos de una actividad se convierten en insumos para otra, minimizando residuos y maximizando la eficiencia.</p>
+                    </div>
                 </div>
-            </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-success mb-4 text-center">🌱 Clones de Cacao Fino: Distribución y Perfil</h4>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-3 bg-success-soft text-left text-xs font-medium text-gray-600 uppercase">Clon</th>
+                                        <th class="py-2 px-3 bg-success-soft text-center text-xs font-medium text-gray-600 uppercase">Porcentaje Siembra (Árboles)</th>
+                                        <th class="py-2 px-3 bg-success-soft text-left text-xs font-medium text-gray-600 uppercase">Perfil Sensorial</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                                    <tr>
+                                        <td class="py-2 px-3 font-semibold">TCS-19</td>
+                                        <td class="py-2 px-3 text-center">60% (3,300)</td>
+                                        <td class="py-2 px-3">🍫 Cacao y nuez, notas dulces tipo chocolate.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3 font-semibold">TCS-13</td>
+                                        <td class="py-2 px-3 text-center">30% (1,650)</td>
+                                        <td class="py-2 px-3">🌿 Herbal y cítrico, aroma intenso.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-3 font-semibold">ICS-1/95</td>
+                                        <td class="py-2 px-3 text-center">10% (550)</td>
+                                        <td class="py-2 px-3">🍓 Frutal, floral, toque especiado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-lg flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-success mb-2 text-center">✨ Experiencia Sensorial: Descubre el Cacao</h4>
+                        
+                        <div class="flex-grow">
+                            <p class="text-gray-600 text-sm mt-1">La experiencia sensorial está diseñada para que visitantes y clientes se conecten con la calidad del origen. La cata guiada revela:</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm ml-4 mt-3 space-y-2">
+                                <li><span class="font-bold">TCS-19 (60%):</span> Base de cuerpo y dulzor que aporta la sustancia.</li>
+                                <li><span class="font-bold">TCS-13 (30%):</span> El balance herbáceo y la frescura cítrica.</li>
+                                <li><span class="font-bold">ICS-1/95 (10%):</span> El toque floral y exótico como nota final.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 p-4 bg-white rounded-lg border border-green-300">
+                            <p class="text-lg font-bold text-gray-800 text-center">🏆 Blend Nawinda: Nuestra Firma</p>
+                            <p class="text-gray-600 text-sm mt-2 text-center">
+                                El <span class="font-bold">"Blend Nawinda"</span> es nuestra firma, una mezcla <span class="font-bold">equilibrada (60/30/10)</span> que sintetiza la sinergia entre el legado Arhuaco y el manejo técnico del cacao fino.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
         </section>
         
         <section id="componentes" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Componentes del Ecosistema Productivo</h2><p class="mt-4 max-w-2xl mx-auto text-gray-600">Cada elemento es una pieza de un engranaje perfecto y autosostenible que reduce costos y multiplica ingresos.</p></div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐐 Ganado Caprino</h4><p class="mt-2 text-gray-600">Producen leche para quesos artesanales y su estiércol es un biofertilizante clave para iniciar el ciclo de nutrientes.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🦆 Aves Felices y Libres</h4><p class="mt-2 text-gray-600">Gallinas criollas y patos Khaki Campbell controlan plagas, producen huevos orgánicos y su gallinaza enriquece el compost.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐇 Cunicultura y Cuyes</h4><p class="mt-2 text-gray-600">Aportan proteína y su estiércol, rico en nitrógeno, es un potente activador para el proceso de compostaje.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐛 Lombricultura y Compostaje</h4><p class="mt-2 text-gray-600">El corazón del sistema: transforma residuos orgánicos en humus de lombriz, garantizando la fertilidad de nuestros cultivos a costo cero.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🦗 Fábrica de Proteína: Grillos</h4><p class="mt-2 text-gray-600">Criamos grillos que se convierten en harina de alta proteína para fabricar, con nuestra peletizadora, nuestro propio alimento para peces y aves.</p></div>
-                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="text-xl font-bold text-success">🐟 Acuaponía y Piscicultura</h4><p class="mt-2 text-gray-600">Un ciclo cerrado donde los peces (tilapia) alimentan con sus desechos a las hortalizas, que a su vez purifican el agua. Eficiencia máxima.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🐐 Ganado Caprino</h4><p class="mt-2 text-gray-600">Producen leche para quesos artesanales y su estiércol es un biofertilizante clave para iniciar el ciclo de nutrientes.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🦆 Aves Felices y Libres</h4><p class="mt-2 text-gray-600">Gallinas criollas y patos Khaki Campbell controlan plagas, producen huevos orgánicos y su gallinaza enriquece el compost.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🐇 Cunicultura y Cuyes</h4><p class="mt-2 text-gray-600">Aportan proteína y su estiércol, rico en nitrógeno, es un potente activador para el proceso de compostaje.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🐛 Lombricultura y Compostaje</h4><p class="mt-2 text-gray-600">El corazón del sistema: transforma residuos orgánicos en humus de lombriz, garantizando la fertilidad de nuestros cultivos a costo cero.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🦗 Fábrica de Proteína: Grillos</h4><p class="mt-2 text-gray-600">Criamos grillos que se convierten en harina de alta proteína para fabricar, con nuestra peletizadora, nuestro propio alimento para peces y aves.</p></div>
+                    <div class="p-6 bg-white rounded-xl shadow-md"><h4 class="font-bold text-success">🐟 Acuaponía y Piscicultura</h4><p class="mt-2 text-gray-600">Un ciclo cerrado donde los peces (tilapia) alimentan con sus desechos a las hortalizas, que a su vez purifican el agua. Eficiencia máxima.</p></div>
                 </div>
             </div>
         </section>
@@ -198,8 +275,8 @@
         <section id="plan" class="py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center"><h2 class="text-3xl font-bold text-gray-800">Plan de Inversión</h2><p class="mt-4 max-w-3xl mx-auto text-gray-600">Un presupuesto transparente que demuestra la asignación estratégica de los fondos y los costos operativos anuales para garantizar la correcta implementación y funcionamiento del proyecto.</p></div>
-                <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-1 gap-12">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-inner lg:col-span-2">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Presupuesto de Infraestructura y Activos</h3>
                         <div class="overflow-x-auto">
                             <table class="min-w-full bg-white rounded-lg">
@@ -213,22 +290,6 @@
                                     <tr class="bg-success-soft"><td class="py-3 px-4 font-bold">TOTAL INVERSIÓN</td><td class="py-3 px-4 text-right font-bold text-success">439,427,020</td></tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                     <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Presupuesto de Operación Anual</h3>
-                        <div class="overflow-x-auto">
-                           <table class="min-w-full bg-white rounded-lg">
-                                <thead><tr><th class="py-2 px-4 bg-success-soft text-left text-xs font-medium text-gray-500 uppercase">Concepto</th><th class="py-2 px-4 bg-success-soft text-right text-xs font-medium text-gray-500 uppercase">Costo Mensual (COP)</th></tr></thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr><td class="py-3 px-4">Salario de Empleados (2)</td><td class="py-3 px-4 text-right font-medium">3,247,000</td></tr>
-                                    <tr><td class="py-3 px-4">Gastos Operativos (Turismo)</td><td class="py-3 px-4 text-right font-medium">1,500,000</td></tr>
-                                    <tr><td class="py-3 px-4">Costos Fijos Ganadería</td><td class="py-3 px-4 text-right font-medium">3,000,000</td></tr>
-                                    <tr><td class="py-3 px-4">Costos de Producción (Cacao)</td><td class="py-3 px-4 text-right font-medium">1,500,000</td></tr>
-                                    <tr class="bg-success-soft"><td class="py-3 px-4 font-bold">TOTAL COSTO ANUAL ESTIMADO</td><td class="py-3 px-4 text-right font-bold text-success">110,964,000</td></tr>
-                                </tbody>
-                            </table>
-                            <p class="text-xs text-gray-500 mt-2 text-center">Este es el costo de funcionamiento para el primer año de operación.</p>
                         </div>
                     </div>
                 </div>
@@ -258,42 +319,78 @@
                     <div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Impacto y Sostenibilidad</h3>
                         <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="text-3xl" style="color: #166534;">📈</div>
-                                <div><h4 class="font-bold">Impacto Económico</h4><p class="text-gray-600">Creación de empleos, diversificación económica local y un negocio exportador de alto valor.</p></div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="text-3xl text-success">👥</div>
-                                <div><h4 class="font-bold">Impacto Social</h4><p class="text-gray-600">Fortalecimiento de la comunidad Arhuaca a través de empleo digno y valoración de sus saberes.</p></div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="text-3xl" style="color: #166534;">🌎</div>
-                                <div><h4 class="font-bold">Impacto Ambiental</h4><p class="text-gray-600">Conservación del 70% del bosque nativo, regeneración de suelos y **alta captura de CO₂**.</p></div>
-                            </div>
+                            <div class="flex items-start space-x-4"><div class="text-3xl">📈</div><div><h4 class="font-bold">Impacto Económico</h4><p class="text-gray-600">Creación de empleos, diversificación económica local y un negocio exportador de alto valor.</p></div></div>
+                            <div class="flex items-start space-x-4"><div class="text-3xl">👥</div><div><h4 class="font-bold">Impacto Social</h4><p class="text-gray-600">Fortalecimiento de la comunidad Arhuaca a través de empleo digno y valoración de sus saberes.</p></div></div>
+                            <div class="flex items-start space-x-4"><div class="text-3xl">🌎</div><div><h4 class="font-bold">Impacto Ambiental</h4><p class="text-gray-600">Conservación del 70% del bosque nativo, regeneración de suelos y reducción de la huella de carbono.</p></div></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="soporte" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-800 text-center">Soporte y Alianzas Estratégicas</h2>
+                <p class="mt-4 max-w-4xl mx-auto text-gray-600 text-center">El proyecto cuenta con el respaldo técnico y estratégico de entidades líderes de los sectores agropecuario, turístico y ambiental, tanto a nivel local como regional, lo que asegura la excelencia, sostenibilidad y viabilidad integral de cada etapa del proceso. Esta articulación interinstitucional fortalece la gestión, facilita la transferencia de conocimientos y promueve la implementación de buenas prácticas alineadas con los lineamientos nacionales de desarrollo sostenible.</p>
+                
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-6 items-center justify-center">
+                    <div class="text-center p-3">
+                        <div class="text-3xl text-success mx-auto mb-2">🔬</div>
+                        <p class="text-sm font-semibold text-gray-700">AGROSAVIA (Investigación)</p>
+                    </div>
+                    <div class="text-center p-3">
+                        <div class="text-3xl text-success mx-auto mb-2">☕</div>
+                        <p class="text-sm font-semibold text-gray-700">FEDECACAO (Asistencia Técnica)</p>
+                    </div>
+                    <div class="text-center p-3">
+                        <div class="text-3xl text-success mx-auto mb-2">🏛️</div>
+                        <p class="text-sm font-semibold text-gray-700">Gob. Santander (Agricultura/Turismo)</p>
+                    </div>
+                    <div class="text-center p-3">
+                        <div class="text-3xl text-success mx-auto mb-2">🏘️</div>
+                        <p class="text-sm font-semibold text-gray-700">Mun. Lebrija (Enlace Local)</p>
+                    </div>
+                    <div class="text-center p-3">
+                        <div class="text-3xl text-success mx-auto mb-2">💧</div>
+                        <p class="text-sm font-semibold text-gray-700">CDMB (Gestión Ambiental)</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
         <section id="contacto" class="py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-                    <div class="text-center md:text-left">
-                        <h4 class="font-bold text-gray-500 uppercase tracking-wider">Proponente del Proyecto (RL)</h4>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
+                    <div class="text-center md:text-left space-y-3">
+                        <h4 class="font-bold text-gray-500 uppercase tracking-wider">PROPIETARIO DEL PROYECTO (R. Legal)</h4>
                         <h3 class="text-3xl font-bold text-gray-800 mt-2">John Jairo Moncada Cepeda</h3>
-                        <p class="text-lg text-success font-bold">Director - Fundación Existencia Sostenible</p>
-                        <p class="text-sm text-gray-700 mt-2">Administrador Público, Esp. Proyectos de Desarrollo, Asesor en comunidades étnicas y pueblos originarios en Formación en Inteligencia Artificial, Talentotech-Mintic</p>
-                        <p class="mt-4 text-gray-500">NIT: 900.862.769-8 | Cel. 316 580 3779</p>
-                        <p class="text-gray-500">Email: funexsos@gmail.com</p>
-                    </div>
-                     <div class="bg-gray-50 p-8 rounded-lg shadow-inner text-center">
-                        <h4 class="font-bold text-gray-500 uppercase tracking-wider">Propuesta Dirigida a</h4>
-                        <h3 class="text-2xl font-bold text-gray-800 mt-4">José Cáceres León</h3>
-                        <p class="text-gray-600">Gerente de Oficina - Agencia Centroabastos</p>
-                        <p class="mt-2 font-bold text-success">BANCO AGRARIO DE COLOMBIA</p>
+                        
+                        <p class="text-lg font-bold text-success">👤 Director - Fundación Existencia Sostenible</p>
+                        
+                        <div class="text-sm text-gray-700 leading-relaxed">
+                            <p>Administrador Público, Esp. Proyectos de Desarrollo, Asesor en comunidades étnicas y pueblos originarios en Formación en Inteligencia Artificial, Talentotech-Mintic</p>
+                            <p class="mt-2">NIT: 900.862.769-8 | Cel. 316 580 3779</p>
+                            <p>Email: funexsos@gmail.com</p>
+                        </div>
+
+                        <div class="mt-6 p-3 bg-success-soft rounded-md text-sm text-left border-2 border-green-300">
+                            <h4 class="font-bold text-success mb-2">Certificación Bancaria (RappiPay Compañía de Financiamiento S.A.)</h4>
+                            <div class="text-gray-700 grid grid-cols-2 gap-y-1">
+                                <span class="font-semibold col-span-2 text-base text-gray-800 mb-1">Titular: Fundación Existencia Sostenible</span>
+                                <span class="font-semibold">NIT:</span> <span>900.862.769-8</span>
+                                <span class="font-semibold">Producto:</span> <span>Cuenta de Ahorros</span>
+                                <span class="font-semibold">No. Cuenta:</span> <span>856929997</span>
+                            </div>
+                        </div>
+                        </div>
+                     
+                    <div class="flex flex-col justify-start">
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-inner text-center">
+                            <h4 class="font-bold text-gray-500 uppercase tracking-wider">Propuesta Dirigida a</h4>
+                            <h3 class="text-2xl font-bold text-gray-800 mt-4">José Cáceres León</h3>
+                            <p class="text-gray-600">Gerente de Oficina - Agencia Centroabastos</p>
+                            <p class="mt-2 font-bold text-success">🏢 BANCO AGRARIO DE COLOMBIA</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -304,10 +401,32 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Valores del Presupuesto Modificados para la tabla de Infraestructura
+            const INVERSION_CABAÑAS = 175000000;
+            const INVERSION_ADECUACION = 97500000;
+            const INVERSION_GANADO = 69427020;
+            const INVERSION_SENDEROS = 45489000;
+            const INVERSION_MAQUINARIA = 52011000;
+            const TOTAL_INVERSION = INVERSION_CABAÑAS + INVERSION_ADECUACION + INVERSION_GANADO + INVERSION_SENDEROS + INVERSION_MAQUINARIA;
+
             const formatCurrency = (value) => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(value);
-            // El valor de la inversión total se mantiene
-            document.getElementById('totalInvestment').textContent = formatCurrency(439427020);
             
+            // Actualización de los valores de Inversión (para la tabla de abajo)
+            const infraTableBody = document.querySelector('#plan tbody');
+            if (infraTableBody) {
+                infraTableBody.innerHTML = `
+                    <tr><td class="py-3 px-4">Construcción de 5 cabañas turísticas</td><td class="py-3 px-4 text-right font-medium">${formatCurrency(INVERSION_CABAÑAS)}</td></tr>
+                    <tr><td class="py-3 px-4">Adecuación 5 ha para cultivos</td><td class="py-3 px-4 text-right font-medium">${formatCurrency(INVERSION_ADECUACION)}</td></tr>
+                    <tr><td class="py-3 px-4">Establecimiento de ganado caprino y área de pastoreo</td><td class="py-3 px-4 text-right font-medium">${formatCurrency(INVERSION_GANADO)}</td></tr>
+                    <tr><td class="py-3 px-4">Senderos, zonas comunes y cocina</td><td class="py-3 px-4 text-right font-medium">${formatCurrency(INVERSION_SENDEROS)}</td></tr>
+                    <tr><td class="py-3 px-4">Maquinaria y Sistemas de E. Circular</td><td class="py-3 px-4 text-right font-medium">${formatCurrency(INVERSION_MAQUINARIA)}</td></tr>
+                    <tr class="bg-success-soft"><td class="py-3 px-4 font-bold">TOTAL INVERSIÓN</td><td class="py-3 px-4 text-right font-bold text-success">${formatCurrency(TOTAL_INVERSION)}</td></tr>
+                `;
+            }
+            document.getElementById('totalInvestment').textContent = formatCurrency(TOTAL_INVERSION);
+
+
+            // CÓDIGO DE GRÁFICA (sin modificar)
             const generateProjections = (years, initialNetFlow, annualGrowthRate, setupYears) => {
                 const netFlow = [];
                 for (let i = 0; i < setupYears; i++) {
@@ -346,7 +465,7 @@
                 }
             });
             
-            // Script de navegación actualizado para incluir la nueva sección #estrategia
+            // Script de navegación (sin modificar)
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('main section');
             window.addEventListener('scroll', () => {
